@@ -20,7 +20,7 @@ public class when_using_leapyear {
     }
     @Test
     public void nonleap_years_are_divisible_by_hundred_but_not_400() {
-        assertFalse(isLeapYear(500));
+        assertFalse(isLeapYear(1700));
     }
 
 }
