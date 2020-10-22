@@ -7,20 +7,20 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class when_using_leapyear {
 
     @Test
-    public void year_2000_is_a_leapyear() {
-        assertTrue(isLeapYear(2000));
+    public void leap_years_are_divisible_by_four_but_not_by_100() {
+        assertFalse(isLeapYear(100));
     }
     @Test
-    public void year_1700_is_not_a_leapyear() {
-        assertFalse(isLeapYear(1700));
+    public void leap_years_are_divisible_by_fourhundred() {
+        assertTrue(isLeapYear(800));
     }
     @Test
-    public void year_2100_is_not_a_leapyear() {
-        assertFalse(isLeapYear(2100));
+    public void nonleap_years_are_not_divisible_by_four() {
+        assertTrue(isLeapYear(4));
     }
     @Test
-    public void year_2004_is_a_leapyear() {
-        assertTrue(isLeapYear(2004));
+    public void nonleap_years_are_divisible_by_hundred_but_not_400() {
+        assertFalse(isLeapYear(500));
     }
 
 }
